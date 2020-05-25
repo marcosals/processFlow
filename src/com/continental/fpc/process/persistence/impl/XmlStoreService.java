@@ -22,34 +22,36 @@ import com.fasterxml.jackson.dataformat.xml.XmlMapper;
  *
  */
 public class XmlStoreService implements StoreService {
+	
+	private String filename;
+	
+	public XmlStoreService() {
+		
+	}
+	
+	public XmlStoreService(String filename) {
+		this.filename = filename;
+	}
 
 	@Override
 	public void serializeObject(ProcessNode node) {
 		
-		XmlMapper xmlMapper = new XmlMapper();
-	    try {
-			xmlMapper.writeValue(new File("simple_bean.xml"), node);
-			File file = new File("simple_bean.xml");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	    
-	    /*
+		// xml serialization
 		try {
-			FileOutputStream fos = new FileOutputStream("C:\\Users\\uidp0368\\eclipse-workspace-jee\\fpc_grappa_release\\process.xml");
-		    XMLEncoder encoder = new XMLEncoder(fos);
-		    encoder.setExceptionListener(new ExceptionListener() {
-		            public void exceptionThrown(Exception e) {
-		                System.out.println("Exception! :"+e.toString());
-		            }
-		    });
-		    encoder.writeObject(node);
-		    encoder.close();
-		    fos.close();
+			FileOutputStream fos = new FileOutputStream(
+					filename);
+			XMLEncoder encoder = new XMLEncoder(fos);
+			encoder.setExceptionListener(new ExceptionListener() {
+				public void exceptionThrown(Exception e) {
+					System.out.println("Exception! :" + e.toString());
+				}
+			});
+			encoder.writeObject(node);
+			encoder.close();
+			fos.close();
 		} catch (Exception e) {
 			System.out.println(e);
-		}*/
+		}
 
 	}
 
@@ -57,7 +59,7 @@ public class XmlStoreService implements StoreService {
 	public ProcessNode deserializeObject() {
 		IProcess process = null;
 		try {
-			XMLDecoder decoder = new XMLDecoder(new BufferedInputStream(new FileInputStream("simple_bean.xml")));
+			XMLDecoder decoder = new XMLDecoder(new BufferedInputStream(new FileInputStream(filename)));
 			process = (IProcess) decoder.readObject();
 			decoder.close();
 			System.out.println(process);

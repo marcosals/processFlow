@@ -38,8 +38,8 @@ public class Step implements IStep {
 		this.description = description;
 		this.status = status;		
 		tasks = new ArrayList<ITask>();
-		tasks.add(new Task((id + 1), "Task_"+(id + 1), "Description_"+(id + 1),Status.NOT_STARTED, "ipconfig"));
-		tasks.add(new Task((id + 2), "Task_"+(id + 2), "Description_"+(id + 2),Status.IN_PROGRESS, "ipconfig"));
+		tasks.add(new Task((id + 1), "Task_"+(id + 1), "Description_"+(id + 1),Status.NOT_STARTED, "ifconfig"));
+		tasks.add(new Task((id + 2), "Task_"+(id + 2), "Description_"+(id + 2),Status.IN_PROGRESS, "ls"));
 		tasks.add(new Task((id + 3), "Task_"+(id + 3), "Description_"+(id + 3),Status.COMPLETED, "ipconfig"));
 	}
 

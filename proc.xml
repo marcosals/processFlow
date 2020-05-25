@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_181" class="java.beans.XMLDecoder">
+ <object class="com.continental.fpc.process.model.impl.Process">
+  <void property="description">
+   <string>Description_100</string>
+  </void>
+  <void property="id">
+   <int>100</int>
+  </void>
+  <void property="name">
+   <string>Process_100</string>
+  </void>
+  <void property="status">
+   <object class="java.lang.Enum" id="Status0" method="valueOf">
+    <class>com.continental.fpc.process.model.Status</class>
+    <string>NOT_STARTED</string>
+   </object>
+  </void>
+  <void property="steps">
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <object class="com.continental.fpc.process.model.impl.Step">
+      <void property="description">
+       <string>Description_110</string>
+      </void>
+      <void property="id">
+       <int>110</int>
+      </void>
+      <void property="name">
+       <string>Step_110</string>
+      </void>
+      <void property="status">
+       <object idref="Status0"/>
+      </void>
+      <void property="tasks">
+       <object class="java.util.ArrayList">
+        <void method="add">
+         <object class="com.continental.fpc.process.model.impl.Task">
+          <void property="command">
+           <string>ifconfig</string>
+          </void>
+          <void property="description">
+           <string>Description_111</string>
+          </void>
+          <void property="id">
+           <int>111</int>
+          </void>
+          <void property="name">
+           <string>Task_111</string>
+          </void>
+          <void property="status">
+           <object idref="Status0"/>
+          </void>
+         </object>
+        </void>
+        <void method="add">
+         <object class="com.continental.fpc.process.model.impl.Task">
+          <void property="command">
+           <string>ls</string>
+          </void>
+          <void property="description">
+           <string>Description_112</string>
+          </void>
+          <void property="id">
+           <int>112</int>
+          </void>
+          <void property="name">
+           <string>Task_112</string>
+          </void>
+          <void property="status">
+           <object class="java.lang.Enum" id="Status1" method="valueOf">
+            <class>com.continental.fpc.process.model.Status</class>
+            <string>IN_PROGRESS</string>
+           </object>
+          </void>
+         </object>
+        </void>
+        <void method="add">
+         <object class="com.continental.fpc.process.model.impl.Task">
+          <void property="command">
+           <string>ipconfig</string>
+          </void>
+          <void property="description">
+           <string>Description_113</string>
+          </void>
+          <void property="id">
+           <int>113</int>
+          </void>
+          <void property="name">
+           <string>Task_113</string>
+          </void>
+          <void property="status">
+           <object class="java.lang.Enum" id="Status2" method="valueOf">
+            <class>com.continental.fpc.process.model.Status</class>
+            <string>COMPLETED</string>
+           </object>
+          </void>
+         </object>
+        </void>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.continental.fpc.process.model.impl.Step">
+      <void property="description">
+       <string>Description_120</string>
+      </void>
+      <void property="id">
+       <int>120</int>
+      </void>
+      <void property="name">
+       <string>Step_120</string>
+      </void>
+      <void property="status">
+       <object idref="Status1"/>
+      </void>
+      <void property="tasks">
+       <object class="java.util.ArrayList">
+        <void method="add">
+         <object class="com.continental.fpc.process.model.impl.Task">
+          <void property="command">
+           <string>ifconfig</string>
+          </void>
+          <void property="description">
+           <string>Description_121</string>
+          </void>
+          <void property="id">
+           <int>121</int>
+          </void>
+          <void property="name">
+           <string>Task_121</string>
+          </void>
+          <void property="status">
+           <object idref="Status0"/>
+          </void>
+         </object>
+        </void>
+        <void method="add">
+         <object class="com.continental.fpc.process.model.impl.Task">
+          <void property="command">
+           <string>ls</string>
+          </void>
+          <void property="description">
+           <string>Description_122</string>
+          </void>
+          <void property="id">
+           <int>122</int>
+          </void>
+          <void property="name">
+           <string>Task_122</string>
+          </void>
+          <void property="status">
+           <object idref="Status1"/>
+          </void>
+         </object>
+        </void>
+        <void method="add">
+         <object class="com.continental.fpc.process.model.impl.Task">
+          <void property="command">
+           <string>ipconfig</string>
+          </void>
+          <void property="description">
+           <string>Description_123</string>
+          </void>
+          <void property="id">
+           <int>123</int>
+          </void>
+          <void property="name">
+           <string>Task_123</string>
+          </void>
+          <void property="status">
+           <object idref="Status2"/>
+          </void>
+         </object>
+        </void>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.continental.fpc.process.model.impl.Step">
+      <void property="description">
+       <string>Description_130</string>
+      </void>
+      <void property="id">
+       <int>130</int>
+      </void>
+      <void property="name">
+       <string>Step_130</string>
+      </void>
+      <void property="status">
+       <object idref="Status2"/>
+      </void>
+      <void property="tasks">
+       <object class="java.util.ArrayList">
+        <void method="add">
+         <object class="com.continental.fpc.process.model.impl.Task">
+          <void property="command">
+           <string>ifconfig</string>
+          </void>
+          <void property="description">
+           <string>Description_131</string>
+          </void>
+          <void property="id">
+           <int>131</int>
+          </void>
+          <void property="name">
+           <string>Task_131</string>
+          </void>
+          <void property="status">
+           <object idref="Status0"/>
+          </void>
+         </object>
+        </void>
+        <void method="add">
+         <object class="com.continental.fpc.process.model.impl.Task">
+          <void property="command">
+           <string>ls</string>
+          </void>
+          <void property="description">
+           <string>Description_132</string>
+          </void>
+          <void property="id">
+           <int>132</int>
+          </void>
+          <void property="name">
+           <string>Task_132</string>
+          </void>
+          <void property="status">
+           <object idref="Status1"/>
+          </void>
+         </object>
+        </void>
+        <void method="add">
+         <object class="com.continental.fpc.process.model.impl.Task">
+          <void property="command">
+           <string>ipconfig</string>
+          </void>
+          <void property="description">
+           <string>Description_133</string>
+          </void>
+          <void property="id">
+           <int>133</int>
+          </void>
+          <void property="name">
+           <string>Task_133</string>
+          </void>
+          <void property="status">
+           <object idref="Status2"/>
+          </void>
+         </object>
+        </void>
+       </object>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>
