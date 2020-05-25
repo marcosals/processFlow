@@ -1,7 +1,10 @@
 /**
  * 
  */
-package com.continental.fpc.process;
+package com.continental.fpc.process.model.impl;
+
+import com.continental.fpc.process.model.ITask;
+import com.continental.fpc.process.model.Status;
 
 /**
  * @author uidp0368
@@ -9,9 +12,6 @@ package com.continental.fpc.process;
  */
 public class Task implements ITask {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 7426446327764231645L;
 	
 	private int id;
@@ -22,15 +22,18 @@ public class Task implements ITask {
 	
 	private Status status;
 	
+	private String command;
+	
 	public Task() {
 		
 	}
 	
-	public Task(int id, String name, String description, Status status) {
+	public Task(int id, String name, String description, Status status, String command) {
 		this.id = id;
 		this.name = name;
 		this.description = description;
 		this.status = status;		
+		this.command = command;
 	}
 
 	@Override
@@ -59,8 +62,8 @@ public class Task implements ITask {
 			   "       id: " + id + "\n" +
 			   "       name: " + name + "\n" +
 			   "       description: " + description + "\n" +
-			   "       status: " + status + "\n";
-		
+			   "       status: " + status + "\n" +
+			   "       command: " + command + "\n";
 	}
 
 	@Override
@@ -81,6 +84,16 @@ public class Task implements ITask {
 	@Override
 	public void setStatus(Status status) {
 		this.status = status;		
+	}
+
+	@Override
+	public String getCommand() {
+		return command;
+	}
+
+	@Override
+	public void setCommand(String command) {
+		this.command = command;
 	}
 
 }

@@ -1,10 +1,14 @@
 /**
  * 
  */
-package com.continental.fpc.process;
+package com.continental.fpc.process.model.impl;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.continental.fpc.process.model.IProcess;
+import com.continental.fpc.process.model.IStep;
+import com.continental.fpc.process.model.Status;
 
 /**
  * @author uidp0368
@@ -12,9 +16,6 @@ import java.util.List;
  */
 public class Process implements IProcess {
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -8007607822980691689L;
 	
 	private List<IStep> steps;	

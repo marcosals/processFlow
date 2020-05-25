@@ -1,10 +1,14 @@
 /**
  * 
  */
-package com.continental.fpc.process;
+package com.continental.fpc.process.model.impl;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.continental.fpc.process.model.IStep;
+import com.continental.fpc.process.model.ITask;
+import com.continental.fpc.process.model.Status;
 
 /**
  * @author uidp0368
@@ -12,9 +16,6 @@ import java.util.List;
  */
 public class Step implements IStep {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 6442678467820673092L;
 	
 	private List<ITask> tasks;
@@ -37,9 +38,9 @@ public class Step implements IStep {
 		this.description = description;
 		this.status = status;		
 		tasks = new ArrayList<ITask>();
-		tasks.add(new Task((id + 1), "Task_"+(id + 1), "Description_"+(id + 1),Status.NOT_STARTED));
-		tasks.add(new Task((id + 2), "Task_"+(id + 2), "Description_"+(id + 2),Status.IN_PROGRESS));
-		tasks.add(new Task((id + 3), "Task_"+(id + 3), "Description_"+(id + 3),Status.COMPLETED));
+		tasks.add(new Task((id + 1), "Task_"+(id + 1), "Description_"+(id + 1),Status.NOT_STARTED, "ipconfig"));
+		tasks.add(new Task((id + 2), "Task_"+(id + 2), "Description_"+(id + 2),Status.IN_PROGRESS, "ipconfig"));
+		tasks.add(new Task((id + 3), "Task_"+(id + 3), "Description_"+(id + 3),Status.COMPLETED, "ipconfig"));
 	}
 
 	@Override

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.continental.fpc.process;
+package com.continental.fpc.process.model;
 
 /**
  * @author uidp0368
